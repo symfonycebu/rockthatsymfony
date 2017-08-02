@@ -1,0 +1,23 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}AppBundle:Project:show{% endblock %}
+
+{% block body %}
+    {#`project.name` is an example of accessing a property of an entity class with the format `entity.property`
+        Here, our entity is project and our property is name. Even if we define the name property as private (see
+        src/AppBundle/Entity/Project.php line 30, we still can use `name` because, internally it is automagically calling
+        `getName` of Project entity (line 80). `project.name` is a shorthand for `project.getName()`.
+    #}
+    <h3>{{ project.name }}</h3>
+    <ul>
+        {% for task in tasks %}
+            <li>
+                {# `task.completed` is a shorthand for task.isCompleted()`. Even if there is no `completed` property in our
+                    Task entity class, but because we have isCompleted method defined, we can use that shorthand.
+                #}
+                {{ task.completed ? '(x)' : '' }}
+                {{ task.name }}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
