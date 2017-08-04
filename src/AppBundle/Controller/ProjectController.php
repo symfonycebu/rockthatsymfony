@@ -50,7 +50,7 @@ class ProjectController extends Controller
      * the route "/project/1" will find an instance of `Project` with the `id` equal to "1". This is
      * done automatically by Symfony by type hinting the parameter `$project` as `Project` in this method.
      *
-     * For more information, search for "PHP type hinting" and "Symfony @ParamConverter" or go to any of the ff links:
+     * For more information, search for "PHP type hinting" and "Symfony ParamConverter" or go to any of the ff links:
      * Related Links: https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/annotations/converters.html
      * Related Links: http://php.net/manual/en/functions.arguments.php#functions.arguments.type-declaration
      * Related Links: https://symfony.com/doc/current/best_practices/controllers.html#using-the-paramconverter
